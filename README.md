@@ -11,6 +11,12 @@ composer update
 ## 使用方式
 ```
 可参考根目录中 test.php
+打印数据：
+read1 SELECT  * FROM c_link
+read2 SELECT  * FROM c_link
+write UPDATE c_link SET `rel` = 1 WHERE  id = 1
+read1 SELECT  * FROM c_link
+read1 SELECT  * FROM c_link
 
 ```
 
