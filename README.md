@@ -14,3 +14,4 @@ composer update
 
 ```
 
+## 只是提供了思路，用于实际生产环境还需要修改MasterSalveClient.php里面诸多方法
