@@ -71,7 +71,7 @@ $config1 = new \EasySwoole\Mysqli\Config([
 $client = new \MasterSalve\MasterSalveClient();
 $client->setWriteList('write');
 $client->setReadList(['read1', 'read2']);
-// 广州艾特推推信息科技有限公司
+
 go(function ()use($client){
     //构建sql
     $client->queryBuilder()->get('c_link');
@@ -86,6 +86,11 @@ go(function ()use($client){
     $client->execBuilder();
     $client->queryBuilder()->get('c_link');
     $client->execBuilder();
+    // read1 SELECT  * FROM c_link
+    // read2 SELECT  * FROM c_link
+    // write UPDATE c_link SET `rel` = 1 WHERE  id = 1
+    // read1 SELECT  * FROM c_link
+    // read1 SELECT  * FROM c_link
 
     \EasySwoole\Component\Pool\PoolManager::getInstance()->clearPool();
 });
