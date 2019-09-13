@@ -21,3 +21,4 @@ read1 SELECT  * FROM c_link
 ```
 
 ## 只是提供了思路，用于实际生产环境还需要修改MasterSalveClient.php里面诸多方法
+## 使用事务需自行增加代码，因为里面每次都用新的mysql pool连接
